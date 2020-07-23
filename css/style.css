@@ -1,0 +1,102 @@
+/* Currency Converter CSS File */
+
+/*-- Basic Style for the page --*/
+body {
+    color:#111;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+#container {
+    margin:100px auto 20px auto;
+    width:800px;
+    height:500px;
+    padding:20px;
+    border: 1px solid lightgray;
+    border-radius: 25px;
+}
+
+/* Removes number input spinners */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/*-- End Basic Style for the page --*/
+
+
+
+/*-- Converter Main Text --*/
+#fromText {
+    width: 750px;
+    height: 50px;
+    margin: 5px 75px 5px 75px;
+    color: gray;
+    font-size: 2em;
+}
+
+#toText {
+    width: 750px;
+    height: 75px;
+    margin: 0px 75px 25px 75px;
+    font-size: 5em;
+}
+/*-- End Converter Main Text --*/
+
+
+
+/*-- Date / Disclaimer Line Text --*/
+#dateTimeLine {
+    margin: 10px 75px 10px 75px;
+}
+
+.dateLine {
+    display: inline;
+    color: gray;
+}
+
+#disclaimer:hover {
+    text-decoration: underline;
+}
+/*-- End Date / Disclaimer Line Text --*/
+
+
+
+/*-- Two Columns for the inputs --*/
+#inpCurr, #dropdown {
+    float: left;
+    width: 50%;
+}
+/*-- End Two Columns for the inputs --*/
+
+
+
+/*-- User Input Boxes --*/
+#inpCurr input {
+    width: 250px;
+    height: 75px;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    margin: 10px 75px 10px 75px;
+    padding: 10px 5px 10px 20px;
+    font-size: 2em;
+}
+
+#dropdown select {
+    width: 250px;
+    height: 75px;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    margin: 10px 75px 10px 75px;
+    cursor: default;
+    font-size: 2em;
+    color: gray;
+    padding-left: 50px;
+}
+/*-- End User Input Boxes --*/
