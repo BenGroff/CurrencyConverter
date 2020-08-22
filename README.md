@@ -1,6 +1,8 @@
 # CurrencyConverter
 This is a remake of the Google currency converter using exchangerates.io API
 
+https://bengroff.github.io/CurrencyConverter/
+
 I am trying to learn more regarding API interaction in web applications. This is just a fun small project for me to learn more and refine some of my skills in this area. The logic is pretty simple and straightforward, I used JavaScript for the main logic and local storage to hold the objects throughout the program.
 
 Software Used:
