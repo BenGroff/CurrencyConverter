@@ -7,7 +7,7 @@
     <meta name="keywords" content="">
     
     <!-- Stylesheets -->
-    <link href="css/destyle.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     
     <!-- Google Font(s) -->
@@ -18,52 +18,53 @@
     
 </head>
 <body>
-    
-<div id="container">
-    
-    <div id="fromText">
-        
-        <p id="convertFrom"></p> 
-    
-    </div>
-    
-    <div id="toText">
-        
-        <p id="convertTo"></p>
-    
-    </div>
-    
-    <div id="dateTimeLine">
-    
-        <p id="dateTime" class="dateLine"></p>
-        <p class="dateLine"> · </p>
-        <a href="https://www.google.com/intl/en/googlefinance/disclaimer/"  id="disclaimer" class="dateLine" target="_blank">Disclaimer</a>
-    
-    </div>
-    
-    <div id="inpCurr">
-    
-        <form>
-        
-            <input type="number" id="fromAmt" onkeyup="liveConvertUpdate('from');"><br>
+    <div class="container my-5 mx-auto">
+        <div class="row">
+            <div class="col-11 col-lg-8 mx-auto my-5 border rounded-lg py-4">
             
-            <input type="number" id="toAmt" onkeyup="liveConvertUpdate('to');"><br>
-        
-        </form>    
-    
+                
+                <!-- Exchange Rate Text -->
+                <div class="row">
+                    <div class="col mx-5">
+                        <h2 id="convertFrom" class="text-gray"></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mx-5">
+                        <h1 id="convertTo" class="display-2"></h1>
+                    </div>
+                </div>
+                
+                
+                <!-- Date - Time - Disclaimer -->
+                <div class="row">
+                    <div class="col mx-5">
+                        <p class="text-gray"><span id="dateTime"></span> · <a href="https://www.google.com/intl/en/googlefinance/disclaimer/"  id="disclaimer" class="dateLine" target="_blank">Disclaimer</a></p>
+                    </div>
+                </div>
+                
+                
+                <!-- User Input -->
+                <div class="row">
+                    
+                    <!-- Number Input -->
+                    <div class="col mx-5">
+                        <input type="number" id="fromAmt" class="mb-3 pl-3 rounded-md input" onkeyup="liveConvertUpdate('from');">
+                        <input type="number" id="toAmt" class="mb-3 pl-3 rounded-md input" onkeyup="liveConvertUpdate('to');">
+                    </div>
+                    
+                    <!-- Currency Type Select -->
+                    <div class="col mx-5">
+                        <select id="fromCurr" class="mb-3 pl-5 rounded-md input text-gray" onchange="getSelect(this, 'from');"></select>
+                        <select id="toCurr" class="mb-3 pl-5 rounded-md input text-gray" onchange="getSelect(this, 'to');"></select> 
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </div>
-    <div id="dropdown">
+        
     
-        <select id="fromCurr" onchange="getSelect(this, 'from');">
-        </select>
-        
-        <select id="toCurr" onchange="getSelect(this, 'to');">
-        </select> 
-        
-    </div>
-        
-</div>  
-        
     <script src="js/clock.js" type="text/javascript"></script>
     <script>
         async function getRates() {
@@ -85,7 +86,6 @@
         if (rates == null) {location.reload();}
         
         createOptions();
-        
     </script>
     
 </body>

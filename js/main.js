@@ -185,7 +185,7 @@ function liveConvertUpdate(el) {
     else {
         
         //does the conversion and rounds it
-        var amt = toAmt * rate;
+        var amt = toAmt / rate;
         var rAmt = amt.toFixed(2);
         
         //sets the fromAmt value

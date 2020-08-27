@@ -1,102 +1,65 @@
-/* Currency Converter CSS File */
+/*----------------------------*/
+/*      General Styling       */
+/*----------------------------*/
 
-/*-- Basic Style for the page --*/
-body {
-    color:#111;
-    background-color: #fff;
-    font-family: 'Roboto', sans-serif;
+.text-gray, a {
+    color: #808080 !important;
 }
 
-#container {
-    margin:100px auto 20px auto;
-    width:800px;
-    height:500px;
-    padding:20px;
-    border: 1px solid lightgray;
+a:hover {
+    color: #808080;
+}
+
+#convertTo {
+    font-weight: 400;
+}
+
+.rounded-lg {
     border-radius: 25px;
 }
 
-/* Removes number input spinners */
-/* Chrome, Safari, Edge, Opera */
+.rounded-md {
+    border-radius: 15px;
+}
+
+.input {
+    width: 250px;
+    height: 75px;
+    border: 1px solid lightgray;
+    font-size: 2em;
+}
+
+/*----------------------------*/
+/*     End General Styling    */
+/*----------------------------*/
+
+
+
+/*----------------------------*/
+/*   Remove Default Styling   */
+/*----------------------------*/
+
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+}
+
+select, input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -ms-appearance: none;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-/* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
-}
-/*-- End Basic Style for the page --*/
-
-
-
-/*-- Converter Main Text --*/
-#fromText {
-    width: 750px;
-    height: 50px;
-    margin: 5px 75px 5px 75px;
-    color: gray;
-    font-size: 2em;
+    -moz-appearance: textfield;
 }
 
-#toText {
-    width: 750px;
-    height: 75px;
-    margin: 0px 75px 25px 75px;
-    font-size: 5em;
-}
-/*-- End Converter Main Text --*/
-
-
-
-/*-- Date / Disclaimer Line Text --*/
-#dateTimeLine {
-    margin: 10px 75px 10px 75px;
-}
-
-.dateLine {
-    display: inline;
-    color: gray;
-}
-
-#disclaimer:hover {
-    text-decoration: underline;
-}
-/*-- End Date / Disclaimer Line Text --*/
-
-
-
-/*-- Two Columns for the inputs --*/
-#inpCurr, #dropdown {
-    float: left;
-    width: 50%;
-}
-/*-- End Two Columns for the inputs --*/
-
-
-
-/*-- User Input Boxes --*/
-#inpCurr input {
-    width: 250px;
-    height: 75px;
-    border: 1px solid lightgray;
-    border-radius: 15px;
-    margin: 10px 75px 10px 75px;
-    padding: 10px 5px 10px 20px;
-    font-size: 2em;
-}
-
-#dropdown select {
-    width: 250px;
-    height: 75px;
-    border: 1px solid lightgray;
-    border-radius: 15px;
-    margin: 10px 75px 10px 75px;
-    cursor: default;
-    font-size: 2em;
-    color: gray;
-    padding-left: 50px;
-}
-/*-- End User Input Boxes --*/
+/*----------------------------*/
+/* End Remove Default Styling */
+/*----------------------------*/
