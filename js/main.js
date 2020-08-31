@@ -100,16 +100,16 @@ function getSelect(sel, el) {
     else {
         localStorage.setItem("toCurr", JSON.stringify(currency));
     }
-    setTitle(el);
+    
+    var to = JSON.parse(localStorage.getItem("toCurr"));
+    
+    if (to == null) {
+        $("#toCurr").trigger("change");
+    }
+    else {
+        setTitle(el);
+    }
 }
-
-$(document).ready(function () {
-    $("#fromCurr").trigger("change");
-});
-
-$(document).ready(function () {
-    $("#toCurr").trigger("change");
-});
 
 
 

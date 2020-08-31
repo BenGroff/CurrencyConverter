@@ -66,26 +66,29 @@
         
     
     <script src="js/clock.js" type="text/javascript"></script>
+    
     <script>
-        async function getRates() {
-
-            //gets data
-            var response = await fetch('https://api.exchangeratesapi.io/latest?base=EUR');
-            var data = await response.json();
-
-            //splits data up
-            var { base, date, rates} = data;
-            
-            //sets rates into local storage
-            localStorage.setItem("rates", JSON.stringify(rates)); 
-        }
-
-        getRates();
         
-        var rates = JSON.parse(localStorage.getItem("rates"));
-        if (rates == null) {location.reload();}
-        
-        createOptions();
+        $(document).ready(function(){
+            $.getJSON("https://api.exchangeratesapi.io/latest?base=EUR",
+                function(response){
+                
+                    //rates from response
+                    var rates = response.rates;
+                
+                    //sets rates into local storage
+                    localStorage.setItem("rates", JSON.stringify(rates));
+                    
+                    //creates select options
+                    createOptions();   
+                    
+                    //removes toCurr on refresh or load, fixes title issue
+                    localStorage.removeItem("toCurr");
+                
+                    //triggers change to set the title
+                    $("#fromCurr").trigger("change");
+                });
+        });
     </script>
     
 </body>
